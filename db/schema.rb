@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_215744) do
 
   create_table "sections", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_date"
     t.boolean "section_full"
   end
 
