@@ -9,14 +9,20 @@ class SectionsController < ApplicationController
   end
 
   def create
-    section = Section.new({name: params[:section][:title],
-                           section_full: params[:section][:section_full]
-                           })
-    section.save
-    redirect_to '/sections'
+    section = Section.new(section_params)
+    section.save!
+    redirect_to "/sections"
   end
 
   def new
+    @section = Section.new({name: params[:section][:title],
+                           section_full: params[:section][:section_full]
+                           })
+  end
 
+private
+
+  def section_params
+    params.permit(:name, :section_full, :play_count)
   end
 end
