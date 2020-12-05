@@ -1,13 +1,13 @@
-<%= form_tag("/sections/", method: :post) do %>
+<%= form_tag "/sections" do %>
 
-<%= label_tag "Name" %>
-<%= text_field_tage :name %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
 
-<%= label_tag "Section Full" %>
-<%= text_field_tage :section_full %>
+  <%= label_tag 'Section Full' %>
+  <%= text_field_tag 'Section Full' %>
 
-<%= label_tag "Created Date" %>
-<%= text_field_tage :created_date %>
+  <%= label_tag 'Created Date' %>
+  <%= text_field_tag 'Created Date' %>
 
-<%= submit_tag "Create Section" %>
+  <%= submit_tag "Create Section" %>
 <% end %>
