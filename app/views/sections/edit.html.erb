@@ -1,0 +1,14 @@
+<%= form_tag "/sections/#{@section.id}", method: :patch do %>
+
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+  
+  <%= label_tag :cartage %>
+  <%= text_field_tag :cartage %>
+<%# make a drop-down selection %>
+
+  <%= label_tag 'Created Date' %>
+  <%= text_field_tag :created_date %>
+
+  <%= submit_tag "Update Section" %>
+<% end %>

@@ -248,6 +248,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           1,
           null
@@ -265,112 +267,7 @@
           null
         ]
       },
-      "/Users/adam/turing/2module/projects/relational_rails/spec/features/orchestras/new_spec.rb": {
-        "lines": [
-
-        ]
-      },
-      "/Users/adam/turing/2module/projects/relational_rails/spec/features/orchestras/show_spec.rb": {
-        "lines": [
-
-        ]
-      },
-      "/Users/adam/turing/2module/projects/relational_rails/spec/features/sections/index_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/adam/turing/2module/projects/relational_rails/spec/features/sections/new_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/adam/turing/2module/projects/relational_rails/spec/features/sections/show_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/adam/turing/2module/projects/relational_rails/app/models/orchestra.rb": {
+      "/Users/adam/turing/2module/projects/relational_rails/app/models/section.rb": {
         "lines": [
           1,
           1,
@@ -384,33 +281,7 @@
           null
         ]
       },
-      "/Users/adam/turing/2module/projects/relational_rails/app/controllers/orchestras_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/adam/turing/2module/projects/relational_rails/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/adam/turing/2module/projects/relational_rails/app/models/section.rb": {
+      "/Users/adam/turing/2module/projects/relational_rails/app/models/instrument.rb": {
         "lines": [
           1,
           1,
@@ -422,7 +293,19 @@
           1,
           null,
           1,
-          3,
+          0,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
           null,
           null,
           1,
@@ -432,9 +315,7 @@
           1,
           0,
           0,
-          null,
-          null,
-          1,
+          0,
           null,
           null,
           1,
@@ -445,14 +326,13 @@
           null
         ]
       },
-      "/Users/adam/turing/2module/projects/relational_rails/app/models/instrument.rb": {
+      "/Users/adam/turing/2module/projects/relational_rails/app/controllers/application_controller.rb": {
         "lines": [
-          1,
           1,
           null
         ]
       }
     },
-    "timestamp": 1607188637
+    "timestamp": 1607191342
   }
 }
