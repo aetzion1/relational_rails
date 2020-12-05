@@ -3,7 +3,7 @@ class OrchestrasController < ApplicationController
     def index
     end
 
-    def new
+    def show
     end
 
     def create

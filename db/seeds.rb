@@ -21,5 +21,5 @@ vp_violin = Instrument.create!(name: 'Vice Principal', date_hired: '2020-02-17',
 nyphil = Orchestra.create!(name:'New York Philharmonic', date_established: '1842-04-02')
 orpheus = Orchestra.create!(name:'Orpheus Chamber Orchestra', date_established: '1972-01-01')
 
-ureli = Conductor.new!(name:'Ureli Corelli Hill', current_conductor: false, years_in_residence: 7, orchestra_id: nyphil.id)
-jaap = Conductor.new!(name:'Jaap van Zweden', current_conductor: true, years_in_residence: 4, orchestra_id: nyphil.id)
+ureli = Conductor.create!(name:'Ureli Corelli Hill', current_conductor: false, years_in_residence: 7, orchestra_id: nyphil.id)
+jaap = Conductor.create!(name:'Jaap van Zweden', current_conductor: true, years_in_residence: 4, orchestra_id: nyphil.id)
