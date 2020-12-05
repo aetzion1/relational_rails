@@ -43,9 +43,9 @@ describe 'Section show page' do
 
     visit "/sections/#{clarinet.id}"
 
-    click_link 'Delete Section'
+    click_button 'Delete Section'
 
-    expect(current_path).to eq ("/sections")
-    expect(page).to_not have_content('Clarinet')
+    expect(current_path).to eq("/sections")
+    expect(current_path).to_not have_content(clarinet.name)
   end
 end

@@ -22,8 +22,13 @@ class SectionsController < ApplicationController
 
   def update
     @section = Section.find(params[:id])
-    @section_update = Section.update(section_params)
+    @section.update(section_params)
     redirect_to "/sections/#{@section.id}"
+  end
+
+  def delete
+    Section.destroy(params[:id])
+    redirect_to "/sections"
   end
 
 private

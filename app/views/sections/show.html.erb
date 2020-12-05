@@ -4,4 +4,6 @@
 
 <p>Created Date: <%= @section.created_date %></p>
 <p>Cartage Required? <%= @section.cartage %></p>
+
 <a href="/sections/<%= @section.id %>/edit">Update Section</a>
+<%= button_to 'Delete Section', "/sections/#{@section.id}", method: :delete %>
