@@ -241,12 +241,15 @@
       "/Users/adam/turing/2module/projects/relational_rails/config/routes.rb": {
         "lines": [
           1,
+          null,
           1,
+          null,
           1,
           1,
           1,
           1,
           null,
+          1,
           null
         ]
       },
@@ -259,6 +262,60 @@
       "/Users/adam/turing/2module/projects/relational_rails/app/helpers/welcome_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/adam/turing/2module/projects/relational_rails/spec/features/orchestras/new_spec.rb": {
+        "lines": [
+
+        ]
+      },
+      "/Users/adam/turing/2module/projects/relational_rails/spec/features/orchestras/show_spec.rb": {
+        "lines": [
+
+        ]
+      },
+      "/Users/adam/turing/2module/projects/relational_rails/spec/features/sections/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -307,7 +364,7 @@
           null
         ]
       },
-      "/Users/adam/turing/2module/projects/relational_rails/app/models/section.rb": {
+      "/Users/adam/turing/2module/projects/relational_rails/app/models/orchestra.rb": {
         "lines": [
           1,
           1,
@@ -315,6 +372,39 @@
         ]
       },
       "/Users/adam/turing/2module/projects/relational_rails/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/adam/turing/2module/projects/relational_rails/app/controllers/orchestras_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/adam/turing/2module/projects/relational_rails/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/adam/turing/2module/projects/relational_rails/app/models/section.rb": {
         "lines": [
           1,
           1,
@@ -349,12 +439,6 @@
           null
         ]
       },
-      "/Users/adam/turing/2module/projects/relational_rails/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
       "/Users/adam/turing/2module/projects/relational_rails/app/models/instrument.rb": {
         "lines": [
           1,
@@ -363,6 +447,6 @@
         ]
       }
     },
-    "timestamp": 1607183917
+    "timestamp": 1607185999
   }
 }
