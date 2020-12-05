@@ -10,8 +10,8 @@ Instrument.destroy_all
 Orchestra.destroy_all
 Conductor.destroy_all
 
-clarinet = Section.create!(name: 'Clarinet', created_date: '2005-01-01')
-violin = Section.create!(name: 'Violin', created_date: '2000-03-29')
+clarinet = Section.create!(name: 'Clarinet', created_date: '2005-01-01', cartage: false)
+violin = Section.create!(name: 'Violin', created_date: '2000-03-29', cartage: false)
 
 p_clarinet = Instrument.create!(name: 'Principal', date_hired: '2020-03-29', age: 52, section_id: clarinet.id)
 vp_clarinet = Instrument.create!(name: 'Vice Principal', date_hired: '2010-04-15', age: 24, section_id: clarinet.id)

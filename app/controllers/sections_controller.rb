@@ -18,7 +18,7 @@ class SectionsController < ApplicationController
 
 private
   def section_params
-    params.permit(:name, :created_date)
+    params.permit(:name, :created_date, :cartage)
   end
 
 end
