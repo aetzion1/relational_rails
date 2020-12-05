@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_215744) do
+ActiveRecord::Schema.define(version: 2020_12_05_154601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_215744) do
     t.string "name"
     t.integer "section_id"
     t.datetime "date_hired"
+    t.integer "age"
   end
 
   create_table "orchestras", force: :cascade do |t|
@@ -36,7 +37,6 @@ ActiveRecord::Schema.define(version: 2020_12_02_215744) do
   create_table "sections", force: :cascade do |t|
     t.string "name"
     t.datetime "created_date"
-    t.boolean "section_full"
   end
 
 end

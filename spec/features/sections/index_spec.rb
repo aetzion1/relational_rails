@@ -6,12 +6,10 @@ RSpec.describe 'Section index page' do
         clarinet = Section.create!(
             name: 'Clarinet',
             created_date: '2005-01-01',
-            section_full: false
         )
         violin = Section.create!(
             name: 'Violin',
             created_date: '2000-03-29',
-            section_full: true
         )
 
         visit "/sections/"
@@ -24,12 +22,10 @@ RSpec.describe 'Section index page' do
       clarinet = Section.create!(
           name: 'Clarinet',
           created_date: '2005-01-01',
-          section_full: false
       )
       violin = Section.create!(
           name: 'Violin',
           created_date: '2000-03-29',
-          section_full: true
       )
 
       visit "/sections/"
