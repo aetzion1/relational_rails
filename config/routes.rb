@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
 
   get '/instruments', to: 'instruments#index'
-  get '/sections/:id/instruments', to: 'instruments#show'
+  get '/instruments/:id', to: 'instruments#show'
+  get '/sections/:id/instruments', to: 'instruments#list'
 
   get '/orchestras', to:'orchestras#index'
 end

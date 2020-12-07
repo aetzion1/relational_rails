@@ -4,10 +4,15 @@ class InstrumentsController < ApplicationController
         @instruments = Instrument.all
     end
 
-    def show
+    def list
         @section_id = params[:id]
         @section_name = Section.where(id: @section_id)[0].name
         @instruments = Instrument.where(section_id: @section_id)
+    end
+
+    def show
+        @instrument = Instrument.find(params[:id])
+        @section_name = Section.where(id: @instrument.section_id)[0].name
     end
 
     # private
