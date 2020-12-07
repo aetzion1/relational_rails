@@ -13,7 +13,7 @@ RSpec.describe "Instrument Index" do
                 # vp_violin = Instrument.create!(name: 'Vice Principal', date_hired: '2020-02-17', age: 58, section_id: violin.id)
                 
                 visit "/instruments"
-                
+                save_and_open_page
                 expect(page).to have_content(p_clarinet.name)
                 expect(page).to have_content(p_clarinet.date_hired)
                 expect(page).to have_content(p_clarinet.age)

@@ -290,8 +290,25 @@
           1,
           null
         ]
+      },
+      "/Users/adam/turing/2module/projects/relational_rails/app/controllers/instruments_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/adam/turing/2module/projects/relational_rails/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1607378228
+    "timestamp": 1607378908
   }
 }
