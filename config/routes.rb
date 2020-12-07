@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   patch '/sections/:id', to: 'sections#update'
   delete '/sections/:id', to: 'sections#delete'
 
+
   get '/instruments', to: 'instruments#index'
+  get '/sections/:id/instruments', to: 'instruments#show'
 
   get '/orchestras', to:'orchestras#index'
 end

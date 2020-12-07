@@ -13,12 +13,28 @@ RSpec.describe "Instrument Index" do
                 # vp_violin = Instrument.create!(name: 'Vice Principal', date_hired: '2020-02-17', age: 58, section_id: violin.id)
                 
                 visit "/instruments"
-                save_and_open_page
+                # save_and_open_page
                 expect(page).to have_content(p_clarinet.name)
                 expect(page).to have_content(p_clarinet.date_hired)
                 expect(page).to have_content(p_clarinet.age)
 
                 expect(p_clarinet.section_id).to eq(clarinet.id)
+            end
+        end
+
+        describe "When I visit /sections/:section_id/instruments I see each instrument within that section and their attributes" do
+            it "Shows section instruments and their attributes" do
+                clarinet = Section.create!(name: 'Clarinet', created_date: '2005-01-01', cartage: false)
+                
+                p_clarinet = Instrument.create!(name: 'Principal', date_hired: '2020-03-29', age: 52, section_id: clarinet.id)
+                # vp_clarinet = Instrument.create!(name: 'Vice Principal', date_hired: '2010-04-15', age: 24, section_id: clarinet.id)
+
+                visit "/sections/#{clarinet.id}/instruments"
+                save_and_open_page
+                expect(page).to have_content(clarinet.name)
+                expect(page).to have_content(p_clarinet.name)
+                expect(page).to have_content(p_clarinet.date_hired)
+                expect(page).to have_content(p_clarinet.age)
             end
         end
     end
