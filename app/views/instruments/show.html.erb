@@ -1,0 +1,7 @@
+<h2><%= @section_name%> Instruments</h2>
+
+<% @instruments.each do |instrument|%>
+    <p> <%= instrument.name%> </p>
+    <p> <%= instrument.date_hired%> </p>
+    <p> <%= instrument.age%> </p>
+<%end%>
