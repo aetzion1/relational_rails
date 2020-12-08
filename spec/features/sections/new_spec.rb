@@ -12,7 +12,7 @@ describe "New Section" do
         expect(current_path).to eq('/sections/new')
 
         fill_in 'Name', with: 'Trumpet'
-        fill_in 'Created Date', with: '2015-02-15'
+        fill_in 'created_date', with: '2015-02-15'
         fill_in 'Cartage', with: false
         click_on 'Create Section'
 
