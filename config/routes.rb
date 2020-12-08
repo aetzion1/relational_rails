@@ -12,8 +12,11 @@ Rails.application.routes.draw do
 
 
   get '/instruments', to: 'instruments#index'
+  get '/sections/:id/instruments/new', to: 'instruments#new'
   get '/instruments/:id', to: 'instruments#show'
   get '/sections/:id/instruments', to: 'instruments#list'
+  post '/sections/:id/instruments', to: 'instruments#create'
+
 
   get '/orchestras', to:'orchestras#index'
 end

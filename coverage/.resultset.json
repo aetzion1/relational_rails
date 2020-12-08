@@ -256,6 +256,9 @@
           1,
           1,
           1,
+          1,
+          1,
+          null,
           null,
           1,
           null
@@ -268,71 +271,6 @@
         ]
       },
       "/Users/kaiheiongaku/turing/mod2/projects/relational_rails/app/helpers/welcome_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/kaiheiongaku/turing/mod2/projects/relational_rails/app/controllers/sections_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-<<<<<<< HEAD
-          2,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-=======
-          null
-        ]
-      },
-      "/Users/adam/turing/2module/projects/relational_rails/app/models/instrument.rb": {
-        "lines": [
-          1,
->>>>>>> dc3292a9df44e68884af9556e06eb5ab57b5a8d3
-          1,
-          null
-        ]
-      },
-      "/Users/adam/turing/2module/projects/relational_rails/app/controllers/instruments_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-<<<<<<< HEAD
-          null,
-          null,
-          null,
-=======
-          0,
-          0,
-          0,
->>>>>>> dc3292a9df44e68884af9556e06eb5ab57b5a8d3
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/kaiheiongaku/turing/mod2/projects/relational_rails/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
@@ -351,12 +289,58 @@
           1,
           null
         ]
+      },
+      "/Users/kaiheiongaku/turing/mod2/projects/relational_rails/app/models/instrument.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/kaiheiongaku/turing/mod2/projects/relational_rails/app/controllers/instruments_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/kaiheiongaku/turing/mod2/projects/relational_rails/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-<<<<<<< HEAD
-    "timestamp": 1607128153
-=======
-    "timestamp": 1607382866
->>>>>>> dc3292a9df44e68884af9556e06eb5ab57b5a8d3
+    "timestamp": 1607462677
   }
 }

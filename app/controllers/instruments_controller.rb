@@ -15,9 +15,19 @@ class InstrumentsController < ApplicationController
         @section_name = Section.where(id: @instrument.section_id)[0].name
     end
 
-    # private
-    # def instrument_params
-    #     params.permit(:name, :date_hired, :age)
-    # end
+    def new
+
+    end
+
+    def create
+      @section = Section.find(params[:id])
+      @instrument = @section.instruments.create!(instrument_params)
+      redirect_to "/sections/#{@section.id}/instruments"
+    end
+
+    private
+    def instrument_params
+        params.permit(:name, :date_hired, :age)
+    end
 
 end
