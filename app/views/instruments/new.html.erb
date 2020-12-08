@@ -1,0 +1,14 @@
+<%= form_tag "/sections/#{@section_id}", method: :post do %>
+
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+
+  <%= label_tag 'Date Hired' %>
+  <%= text_field_tag :date_hired %>
+<%# make a drop-down selection %>
+
+  <%= label_tag :age %>
+  <%= text_field_tag :age %>
+
+  <%= submit_tag "Create Instrument" %>
+<% end %>
