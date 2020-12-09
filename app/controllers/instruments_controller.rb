@@ -1,7 +1,12 @@
 class InstrumentsController < ApplicationController
 
     def index
-        @instruments = Instrument.all
+        @section_id = params['section_id']
+        if @section_id.to_i > 0
+            @instruments = Instrument.where(section_id: @section_id)
+        else
+            @instruments = Instrument.all
+        end
     end
 
     def list
@@ -16,12 +21,10 @@ class InstrumentsController < ApplicationController
     end
 
     def new
-
     end
 
     def create
       @section = Section.find(params[:id])
-      require 'pry'; binding.pry
       @section_id = @section.id
       @instrument = @section.instruments.create!(instrument_params)
       redirect_to "/sections/#{@section_id}/instruments"
@@ -29,7 +32,7 @@ class InstrumentsController < ApplicationController
 
     private
     def instrument_params
-        params.permit(:name, :date_hired, :age)
+        params.permit(:name, :date_hired, :age, :section_id)
     end
 
 end

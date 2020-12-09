@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # For details on the DSL available within this file,
+  # see http://guides.rubyonrails.org/routing.html
+
+  resources :sections do
+    resources :instruments
+  end
+
   get '/', to: 'welcome#index'
 
   get '/sections', to: 'sections#index'
@@ -10,13 +16,12 @@ Rails.application.routes.draw do
   patch '/sections/:id', to: 'sections#update'
   delete '/sections/:id', to: 'sections#delete'
 
-
   get '/instruments', to: 'instruments#index'
+  get '/sections/:id/instruments', to: 'instruments#index'
   get '/sections/:id/instruments/new', to: 'instruments#new'
-  get '/instruments/:id', to: 'instruments#show'
-  get '/sections/:id/instruments', to: 'instruments#list'
   post '/sections/:id/instruments', to: 'instruments#create'
-
+  get '/instruments/:id', to: 'instruments#show'
+  # get '/sections/:id/instruments', to: 'instruments#list'
 
   get '/orchestras', to:'orchestras#index'
 end

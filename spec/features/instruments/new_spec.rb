@@ -1,17 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe "As a visitor" do
-  describe "when I visit a section instruments index page" do
-    describe "I click a link to create an instrument" do
-      it "allows me to create a new instrument" do
+RSpec.describe "New Instrument Page" do
+  describe "As a visitor" do
+    describe "visit a section instruments index page" do
+      it "creates a new instrument" do
         clarinet = Section.create!(name: 'Clarinet', created_date: '2005-01-01', cartage: false)
 
         p_clarinet = Instrument.create!(name: 'Principal', date_hired: '2020-03-29', age: 52, section_id: clarinet.id)
         vp_clarinet = Instrument.create!(name: 'Vice Principal', date_hired: '2010-04-15', age: 24, section_id: clarinet.id)
 
         visit "/sections/#{clarinet.id}/instruments"
-        save_and_open_page
+
         click_link 'Create Instrument'
+
         expect(current_path).to eq("/sections/#{clarinet.id}/instruments/new")
 
         fill_in 'Name', with: 'Auxiliary'
