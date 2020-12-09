@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2020_12_05_170709) do
     t.string "name"
     t.datetime "created_date"
     t.boolean "cartage"
+
+    t.timestamps
   end
 
 end

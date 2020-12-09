@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Section index page' do
 
-    it  'Can show section names' do
+    it  'Can show section names in order' do
         clarinet = Section.create!(
             name: 'Clarinet',
             created_date: '2005-01-01',
@@ -15,9 +15,11 @@ RSpec.describe 'Section index page' do
         )
 
         visit "/sections/"
+        save_and_open_page
 
         expect(page).to have_content(clarinet.name)
         expect(page).to have_content(violin.name)
+        expect(page.text.index(clarinet.name)).to be < page.text.index(violin.name)
     end
 
     it 'shows parent link' do
@@ -32,7 +34,7 @@ RSpec.describe 'Section index page' do
           cartage: false
       )
 
-      visit "/sections/"
+      visit "/sections"
 
       expect(page).to have_link('New Section', href: "/sections/new")
 
