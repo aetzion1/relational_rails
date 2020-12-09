@@ -1,7 +1,7 @@
 class SectionsController < ApplicationController
 
   def index
-    @sections = Section.order(:created_at)
+    @sections = Section.order(cartage: :desc).order(:created_at)
   end
 
   def show

@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'Section index page' do
 
-    it  'Can show section names in order' do
+    it  'Can show section names in order of cartage and created time' do
         clarinet = Section.create!(
             name: 'Clarinet',
             created_date: '2005-01-01',
-            cartage: false
+            cartage: true
         )
         violin = Section.create!(
             name: 'Violin',
@@ -15,7 +15,6 @@ RSpec.describe 'Section index page' do
         )
 
         visit "/sections/"
-        save_and_open_page
 
         expect(page).to have_content(clarinet.name)
         expect(page).to have_content(violin.name)
