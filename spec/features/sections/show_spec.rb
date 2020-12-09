@@ -27,7 +27,7 @@ describe 'Section show page' do
     expect(current_path).to eq ("/sections/#{clarinet.id}/edit")
 
     fill_in 'Name', with: 'Clarinet'
-    fill_in 'Created Date', with: '2005-02-01'
+    fill_in 'created_date', with: '2005-02-01'
     fill_in 'Cartage', with: false
     click_on 'Update Section'
 

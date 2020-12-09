@@ -3,4 +3,7 @@
 
 <p> <%= @instrument.date_hired%> </p>
 <p> <%= @instrument.age%> </p>
+<br />
+<%= link_to('Edit', "/instruments/#{params[:id]}/edit") %>
+<br />
 <%= button_to 'Delete Instrument', "/instruments/#{@instrument.id}", method: :delete %>
