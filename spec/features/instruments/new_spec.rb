@@ -20,7 +20,7 @@ RSpec.describe "New Instrument Page" do
         fill_in 'Age', with: 40
         click_on 'Create Instrument'
 
-        expect(current_path).to eq("/sections/#{clarinet.id}")
+        expect(current_path).to eq("/sections/#{clarinet.id}/instruments")
         expect(page).to have_content('2015-02-15')
         expect(page).to have_content(40)
         expect(page).to have_content("Auxiliary")

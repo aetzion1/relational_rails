@@ -21,12 +21,13 @@ class InstrumentsController < ApplicationController
     end
 
     def new
+        @section_id = params[:section_id]
     end
 
     def create
-      @section = Section.find(params[:id])
-      @section_id = @section.id
-      @instrument = @section.instruments.create!(instrument_params)
+        @section_id = params[:section_id]
+      @section = Section.find(params[:section_id])
+      instrument = @section.instruments.create!(instrument_params)
       redirect_to "/sections/#{@section_id}/instruments"
     end
 
