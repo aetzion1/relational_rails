@@ -6,7 +6,7 @@ describe 'Section show page' do
 
     p_clarinet = Instrument.create!(name: 'Principal', date_hired: '2020-03-29', age: 52, section_id: clarinet.id)
     vp_clarinet = Instrument.create!(name: 'Vice Principal', date_hired: '2010-04-15', age: 24, section_id: clarinet.id)
-    
+
     visit "/sections/#{clarinet.id}"
     expect(page).to have_content(clarinet.name)
     expect(page).to have_content(clarinet.created_date)
@@ -19,7 +19,7 @@ describe 'Section show page' do
     p_clarinet = Instrument.create!(name: 'Principal', date_hired: '2020-03-29', age: 52, section_id: clarinet.id)
     vp_clarinet = Instrument.create!(name: 'Vice Principal', date_hired: '2010-04-15', age: 24, section_id: clarinet.id)
 
-  
+
     visit "/sections/#{clarinet.id}"
 
     click_link 'Update Section'

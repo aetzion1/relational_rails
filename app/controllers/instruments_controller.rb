@@ -15,6 +15,12 @@ class InstrumentsController < ApplicationController
         @section_name = Section.where(id: @instrument.section_id)[0].name
     end
 
+    def delete
+      section_id = Section.find(Instrument.find(params[:id]).section_id).id
+      Instrument.destroy(params[:id])
+      redirect_to "/sections/#{section_id}/instruments"
+    end
+
     # private
     # def instrument_params
     #     params.permit(:name, :date_hired, :age)
