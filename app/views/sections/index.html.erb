@@ -3,6 +3,7 @@
 <% @sections.each do |section| %>
   <h3><%= section.name %></h3>
   <p><%= section.id %></p>
+  <p><%= section.created_at %></p>
 <% end %>
 
 <a href="/sections/new">New Section</a>

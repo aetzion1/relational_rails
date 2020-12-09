@@ -20,6 +20,8 @@ RSpec.describe 'Section index page' do
         expect(page).to have_content(clarinet.name)
         expect(page).to have_content(violin.name)
         expect(page.text.index(clarinet.name)).to be < page.text.index(violin.name)
+        expect(page).to have_content(violin.created_at)
+        expect(page).to have_content(clarinet.created_at)
     end
 
     it 'shows parent link' do

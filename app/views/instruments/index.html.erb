@@ -4,7 +4,8 @@
     <h3><%= instrument.name%></h3>
     <h4> <%= instrument.section.name%></h4>
     <p>Hired on: <%= instrument.date_hired%></p>
-    <p>Age: <%= instrument.age%></p>
+    <p>Age: <%= instrument.age %></p>
+    <p>Created At: <%= instrument.created_at %></p>
 <%end%>
 <br />
 <%= link_to('Create Instrument', "/sections/#{@section_id}/instruments/new") %>

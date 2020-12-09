@@ -3,9 +3,9 @@ class InstrumentsController < ApplicationController
     def index
         @section_id = params['section_id']
         if @section_id.to_i > 0
-            @instruments = Instrument.where(section_id: @section_id)
+            @instruments = Instrument.where(section_id: @section_id).order(:created_at)
         else
-            @instruments = Instrument.all
+            @instruments = Instrument.order(:created_at)
         end
     end
 
@@ -51,6 +51,5 @@ class InstrumentsController < ApplicationController
     def instrument_params
         params.permit(:name, :date_hired, :age)
     end
->>>>>>> 2f7b6f1b2111a7100ec413d8f672b6cb420e5456
 
 end

@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2020_12_05_170709) do
     t.integer "section_id"
     t.datetime "date_hired"
     t.integer "age"
+
+    t.timestamps
   end
 
   create_table "orchestras", force: :cascade do |t|
@@ -38,8 +40,8 @@ ActiveRecord::Schema.define(version: 2020_12_05_170709) do
     t.string "name"
     t.datetime "created_date"
     t.boolean "cartage"
-
-    t.timestamps
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
