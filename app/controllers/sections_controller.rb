@@ -26,7 +26,7 @@ class SectionsController < ApplicationController
     redirect_to "/sections/#{@section.id}"
   end
 
-  def delete
+  def destroy
     Section.destroy(params[:id])
     redirect_to "/sections"
   end

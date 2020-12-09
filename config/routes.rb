@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   post '/sections', to: 'sections#create'
   get '/sections/:id/edit', to: 'sections#edit'
   patch '/sections/:id', to: 'sections#update'
-  delete '/sections/:id', to: 'sections#delete'
+  delete '/sections/:id', to: 'sections#destroy'
 
   get '/instruments', to: 'instruments#index'
   get '/sections/:id/instruments', to: 'instruments#index'
