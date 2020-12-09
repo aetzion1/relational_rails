@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get '/sections/:id/instruments/new', to: 'instruments#new'
   post '/sections/:id/instruments', to: 'instruments#create'
   get '/instruments/:id', to: 'instruments#show'
+  get 'instruments/:id/edit', to: 'instruments#edit'
+  patch 'instruments/:id', to: 'instruments#update'
   # get '/sections/:id/instruments', to: 'instruments#list'
 
   get '/orchestras', to:'orchestras#index'

@@ -26,14 +26,24 @@ class InstrumentsController < ApplicationController
 
     def create
         @section_id = params[:section_id]
-      @section = Section.find(params[:section_id])
-      instrument = @section.instruments.create!(instrument_params)
-      redirect_to "/sections/#{@section_id}/instruments"
+        @section = Section.find(params[:section_id])
+        instrument = @section.instruments.create!(instrument_params)
+        redirect_to "/sections/#{@section_id}/instruments"
+    end
+
+    def edit
+        @instrument = Instrument.find(params[:id])
+    end
+    
+    def update
+        @instrument = Instrument.find(params[:id])
+        @instrument.update(instrument_params)
+        redirect_to "/instruments/#{@instrument.id}"    
     end
 
     private
     def instrument_params
-        params.permit(:name, :date_hired, :age, :section_id)
+        params.permit(:name, :date_hired, :age)
     end
 
 end
