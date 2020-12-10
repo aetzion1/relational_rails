@@ -1,7 +1,13 @@
 class SectionsController < ApplicationController
 
   def index
-    @sections = Section.order(cartage: :desc).order(:created_at)
+    if params["commit"] == "submit"
+      @sections = section.by_sections
+    # if params[:sort]
+    #   @sections = Section.all.sort_by(&:count_instruments)
+    else
+      @sections = Section.order(cartage: :desc).order(:created_at)
+    end
   end
 
   def show
