@@ -47,7 +47,11 @@ class InstrumentsController < ApplicationController
     def delete
         section_id = Section.find(Instrument.find(params[:id]).section_id).id
         Instrument.destroy(params[:id])
-        redirect_to "/sections/#{section_id}/instruments"
+        if params[:id] == section_id
+          redirect_to "/sections/#{section_id}/instruments"
+        else
+          redirect_to "/instruments"
+        end
     end
 
     private
