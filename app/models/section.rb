@@ -5,7 +5,7 @@ class Section < ApplicationRecord
       instruments.count
     end
 
-    def self.by_instruments
-      Section.all.sort_by {|Section| -Section.instruments.count}
-    end
+    # def self.by_instruments
+    #   Section.all.sort_by {|Section| -Section.instruments.count}
+    # end
 end

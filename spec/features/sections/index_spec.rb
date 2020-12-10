@@ -24,6 +24,26 @@ RSpec.describe 'Section index page' do
                 expect(page).to have_content(clarinet.created_at)
             end
 
+            it 'shows a link to edit the section info and takes me to the edit page' do
+              clarinet = Section.create!(
+                  name: 'Clarinet',
+                  created_date: '2005-01-01',
+                  cartage: true
+              )
+              violin = Section.create!(
+                  name: 'Violin',
+                  created_date: '2000-03-29',
+                  cartage: false
+              )
+
+              visit "/sections/"
+              expect(page).to have_button('Edit')
+              expect(page).to have_button('Edit')
+              #, :href "/sections/#{violin.id}/edit")
+              click_on "Edit", href: "/sections/#{clarinet.id}/edit"
+              expect(current_path).to eq("/sections/#{clarinet.id}/edit")
+            end
+
             it 'shows parent link' do
             clarinet = Section.create!(
                 name: 'Clarinet',
