@@ -1,0 +1,20 @@
+<div class="topnav">
+    <a href="/sections">Sections</a>
+    <a href="/instruments">Instruments</a>
+</div>
+<h2>Here are our instruments:</h2>
+
+<% @instruments.each do |instrument| %>
+    <h3><%= link_to("#{instrument.name}", "/instruments/#{instrument.id}") %><%= button_to 'Edit', "/instruments/#{instrument.id}/edit", method: :get %><%= button_to 'Delete', "/instruments/#{instrument.id}", method: :delete %></h3>
+    <h4> <%= link_to("#{instrument.section.name}", "/sections/#{@section_id}") %></h4>
+    <p>Hired on: <%= instrument.date_hired%></p>
+    <p>Age: <%= instrument.age %></p>
+    <p>Created At: <%= instrument.created_at %></p>
+<% end %>
+<br />
+<%= link_to('Create Instrument', "/sections/#{@section_id}/instruments/new") %>
+
+<%= form_tag "/instruments", method: :get do %>
+    <%= submit_tag 'Only return instruments over the age of:' %>
+    <%= text_field_tag :age %>
+<%end%>

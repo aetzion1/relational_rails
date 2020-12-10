@@ -1,0 +1,13 @@
+<div class="topnav">
+    <a href="/sections">Sections</a>
+    <a href="/instruments">Instruments</a>
+</div>
+<h2><%= link_to("#{@instrument.name}", "/instruments/#{@instrument.id}") %></h2>
+<h2><%= link_to("#{@section_name}", "/sections/#{@section_id}") %></h2>
+
+<p> <%= @instrument.date_hired%> </p>
+<p> <%= @instrument.age%> </p>
+<br />
+<%= link_to('Edit', "/instruments/#{params[:id]}/edit") %>
+<br />
+<%= button_to 'Delete Instrument', "/instruments/#{@instrument.id}", method: :delete %>

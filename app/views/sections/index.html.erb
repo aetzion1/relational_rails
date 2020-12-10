@@ -1,7 +1,18 @@
+<div class="topnav">
+    <a href="/sections">Sections</a>
+    <a href="/instruments">Instruments</a>
+</div>
 <h1>All Sections</h1>
 
 <% @sections.each do |section| %>
-  <h3><%= section.name %></h3>
+  <h3><%= link_to("#{section.name}", "/sections/#{section.id}") %><%= button_to 'Edit', "/sections/#{section.id}/edit", method: :get %><%= button_to 'Delete', "/sections/#{section.id}", method: :delete %></h3>
+  <p><%= section.id %></p>
+  <p><%= section.created_at %></p>
 <% end %>
 
-<a href= "/sections/new">New Section</a>
+<a href="/sections/new">New Section</a>
+<br />
+
+
+<%= link_to 'Sort by Total Instruments', '/sections?sort=desc'%>
+<%# # NEED FORM INSTEAD OF ABOVE LINK? %>

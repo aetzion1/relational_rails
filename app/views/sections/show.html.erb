@@ -1,6 +1,14 @@
+<div class="topnav">
+    <a href="/sections">Sections</a>
+    <a href="/instruments">Instruments</a>
+    <a href="/sections/<%= @section.id %>/instruments">Section Instruments</a>
+</div>
 <a href="/sections">Section Index</a>
 
-<h1><%= @section.name %></h1>
+<h1><%= link_to("#{@section.name}", "/sections/#{@section.id}") %></h1>
 
-<p>Section_full?:<%= @section.section_full %></p>
-<a href="/section/"<%= @section.id %>/edit">Edit</a>
+<p>Created Date: <%= @section.created_date %></p>
+<p>Cartage Required? <%= @section.cartage %></p>
+
+<a href="/sections/<%= @section.id %>/edit">Update Section</a>
+<%= button_to 'Delete Section', "/sections/#{@section.id}", method: :delete %>
