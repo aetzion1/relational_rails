@@ -2,7 +2,10 @@ class InstrumentsController < ApplicationController
 
     def index
         @section_id = params['section_id']
-        if @section_id.to_i > 0
+        # require 'pry'; binding.pry
+        if params[:age]
+            @instruments = Instrument.where('age > ?', params[:age]).order(:created_at)
+        elsif @section_id.to_i > 0
             @instruments = Instrument.where(section_id: @section_id).order(:created_at)
         else
             @instruments = Instrument.order(:created_at)

@@ -6,6 +6,12 @@
     <p>Hired on: <%= instrument.date_hired%></p>
     <p>Age: <%= instrument.age %></p>
     <p>Created At: <%= instrument.created_at %></p>
-<%end%>
+<% end %>
 <br />
 <%= link_to('Create Instrument', "/sections/#{@section_id}/instruments/new") %>
+
+<%= form_tag "/instruments", method: :get do %>
+    <%= submit_tag 'Only return instruments over the age of:' %>
+    <%= text_field_tag :age %>
+<%end%>
+

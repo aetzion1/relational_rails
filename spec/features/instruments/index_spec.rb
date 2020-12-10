@@ -50,8 +50,14 @@ RSpec.describe "Instrument Index" do
 
             visit "/sections/#{clarinet.id}/instruments"
             save_and_open_page
+
+            fill_in 'age', with: '50'
+            click_on 'Only return instruments over the age of:'  
+
+            expect(current_path).to eq("/instruments")
             expect(page).to have_content(clarinet.count_instruments)
           end
         end
-      end
+
+  end
 end
