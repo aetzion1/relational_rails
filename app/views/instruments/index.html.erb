@@ -1,7 +1,7 @@
 <h2>Here are our instruments:</h2>
 
 <% @instruments.each do |instrument| %>
-    <h3><%= instrument.name%><%= button_to 'Edit', "/instruments/#{instrument.id}/edit", method: :get %><%= button_to 'Delete', "/instruments/#{instrument.id}", method: :delete %></h3>
+    <h3><%= link_to("#{instrument.name}", "/instruments/#{instrument.id}") %><%= button_to 'Edit', "/instruments/#{instrument.id}/edit", method: :get %><%= button_to 'Delete', "/instruments/#{instrument.id}", method: :delete %></h3>
     <h4> <%= link_to("#{instrument.section.name}", "/sections/#{@section_id}") %></h4>
     <p>Hired on: <%= instrument.date_hired%></p>
     <p>Age: <%= instrument.age %></p>

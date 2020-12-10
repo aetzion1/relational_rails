@@ -1,4 +1,4 @@
-<h2><%= @instrument.name %></h2>
+<h2><%= link_to("#{@instrument.name}", "/instruments/#{@instrument.id}") %></h2>
 <h2><%= link_to("#{@section_name}", "/sections/#{@section_id}") %></h2>
 
 <p> <%= @instrument.date_hired%> </p>
