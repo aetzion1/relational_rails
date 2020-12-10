@@ -1,7 +1,7 @@
 <h1>All Sections</h1>
 
 <% @sections.each do |section| %>
-  <h3><%= section.name %><%= button_to 'Edit', "/sections/#{section.id}/edit", method: :get %><%= button_to 'Delete', "/sections/#{section.id}", method: :delete %></h3>
+  <h3><%= link_to("#{section.name}", "/sections/#{section.id}") %><%= button_to 'Edit', "/sections/#{section.id}/edit", method: :get %><%= button_to 'Delete', "/sections/#{section.id}", method: :delete %></h3>
   <p><%= section.id %></p>
   <p><%= section.created_at %></p>
 <% end %>

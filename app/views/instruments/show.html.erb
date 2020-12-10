@@ -1,5 +1,5 @@
 <h2><%= @instrument.name %></h2>
-<h2><%= @section_name %></h2>
+<h2><%= link_to("#{@section_name}", "/sections/#{@section_id}") %></h2>
 
 <p> <%= @instrument.date_hired%> </p>
 <p> <%= @instrument.age%> </p>

@@ -1,6 +1,6 @@
 <a href="/sections">Section Index</a>
 
-<h1><%= @section.name %></h1>
+<h1><%= link_to("#{@section.name}", "/sections/#{@section.id}") %></h1>
 
 <p>Created Date: <%= @section.created_date %></p>
 <p>Cartage Required? <%= @section.cartage %></p>

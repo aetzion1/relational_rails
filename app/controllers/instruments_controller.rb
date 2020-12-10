@@ -20,6 +20,7 @@ class InstrumentsController < ApplicationController
 
     def show
         @instrument = Instrument.find(params[:id])
+        @section_id = Section.where(id: @instrument.section_id)[0].id
         @section_name = Section.where(id: @instrument.section_id)[0].name
     end
 
